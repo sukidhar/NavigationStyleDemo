@@ -1,24 +1,180 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16096" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DIZ-EU-N2Z">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Navigation Controller-->
+        <scene sceneID="Srn-Y0-GLn">
+            <objects>
+                <navigationController id="DIZ-EU-N2Z" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="nWl-7H-zgj">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="802-da-KQV"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fhq-Zo-9lm" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1148" y="74"/>
+        </scene>
+        <!--First-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="navigationStyle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j7o-eN-A9J">
+                                <rect key="frame" x="167" y="418" width="80" height="60"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="jAU-nP-Ma6"/>
+                                    <constraint firstAttribute="width" constant="80" id="zbJ-ux-nyg"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="mUN-W4-AIZ" kind="show" id="zyW-NK-lkI"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="j7o-eN-A9J" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="bUY-CR-CWS"/>
+                            <constraint firstItem="j7o-eN-A9J" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="hSM-Bj-Wut"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" title="First" id="MC5-WU-uEc"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="-116" y="74"/>
+        </scene>
+        <!--second-->
+        <scene sceneID="S96-Mx-eUF">
+            <objects>
+                <viewController id="mUN-W4-AIZ" customClass="SecondViewController" customModule="navigationStyle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="dhp-T9-HgL">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="znl-ae-Wqa">
+                                <rect key="frame" x="167" y="418" width="80" height="60"/>
+                                <color key="backgroundColor" systemColor="systemTealColor" red="0.35294117650000001" green="0.7843137255" blue="0.98039215690000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="7IA-eR-6dX"/>
+                                    <constraint firstAttribute="width" constant="80" id="xhs-qI-SbV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Next">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <segue destination="k1c-Dj-RAm" kind="show" id="sa0-aw-oS4"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yQU-Oh-KKp">
+                                <rect key="frame" x="167" y="518" width="80" height="60"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.56470588239999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="a76-ov-WPt"/>
+                                    <constraint firstAttribute="width" constant="80" id="nof-Ks-PSQ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="back">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backPressed:" destination="mUN-W4-AIZ" eventType="touchUpInside" id="etB-nT-dpm"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="znl-ae-Wqa" firstAttribute="centerY" secondItem="dhp-T9-HgL" secondAttribute="centerY" id="gYG-dW-p1u"/>
+                            <constraint firstItem="yQU-Oh-KKp" firstAttribute="centerX" secondItem="dhp-T9-HgL" secondAttribute="centerX" id="iKI-Zm-ndk"/>
+                            <constraint firstItem="yQU-Oh-KKp" firstAttribute="top" secondItem="znl-ae-Wqa" secondAttribute="bottom" constant="40" id="m6E-ml-QK3"/>
+                            <constraint firstItem="znl-ae-Wqa" firstAttribute="centerX" secondItem="dhp-T9-HgL" secondAttribute="centerX" id="mDo-Ym-A4b"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="O96-3a-369"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="second" id="0FL-oB-jWN"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="qAw-d5-waK" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="920" y="74"/>
+        </scene>
+        <!--third-->
+        <scene sceneID="kaw-p9-Fqb">
+            <objects>
+                <viewController id="k1c-Dj-RAm" customClass="ThirdViewController" customModule="navigationStyle" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="J2H-NY-qaU">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JZx-0s-bUg">
+                                <rect key="frame" x="137" y="418" width="140" height="60"/>
+                                <color key="backgroundColor" red="0.99607843139999996" green="0.56470588239999997" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="SNU-4W-4ep"/>
+                                    <constraint firstAttribute="height" constant="60" id="xYi-jS-DOn"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
+                                <state key="normal" title="go to first">
+                                    <color key="titleColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="10"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="layer.maskToBounds" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="backPressed:" destination="mUN-W4-AIZ" eventType="touchUpInside" id="Hj0-58-vnP"/>
+                                    <action selector="goToFirstScreen:" destination="k1c-Dj-RAm" eventType="touchUpInside" id="IVP-Bl-l1k"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="JZx-0s-bUg" firstAttribute="centerY" secondItem="J2H-NY-qaU" secondAttribute="centerY" id="7gd-1m-dFW"/>
+                            <constraint firstItem="JZx-0s-bUg" firstAttribute="centerX" secondItem="J2H-NY-qaU" secondAttribute="centerX" id="W6Z-LU-fpL"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pR4-Z2-xN7"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="third" id="oiU-hA-uin"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UNh-SE-pt5" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1990" y="74"/>
         </scene>
     </scenes>
 </document>
